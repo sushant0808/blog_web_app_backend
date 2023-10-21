@@ -15,7 +15,11 @@ app.use(express.static(`${__dirname}/public`));
 
 app.post("/register", async (req, res) => {
   try {
+    console.log("REQ.BODY", req.body);
+
     const newUser = await User.create(req.body);
+
+    console.log("NEWUSER", newUser);
 
     // Convert the Mongoose document to a plain JavaScript object
     const finalUserObject = newUser.toObject();
