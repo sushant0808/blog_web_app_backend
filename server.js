@@ -11,9 +11,8 @@ const DB = process.env.DB_CONNECTION.replace(
 
 mongoose.connect(DB).then(() => {
   console.log("DB connected.....");
-});
-
-const port = process.env.PORT || 4001;
-app.listen(port, () => {
-  console.log(`App running on port ${port}...`);
+  const port = process.env.PORT || 4001;
+  app.listen(port, () => {
+    console.log(`App running on port ${port}...`);
+  });
 });
