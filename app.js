@@ -5,7 +5,11 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://127.0.0.1:5500", "http://127.0.0.1:5501"],
+    origin: [
+      "http://127.0.0.1:5500",
+      "http://127.0.0.1:5501",
+      "http://localhost:4200",
+    ],
     methods: ["GET", "PUT", "POST"],
     credentials: true,
   })
